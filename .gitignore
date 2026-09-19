@@ -1,0 +1,35 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Study data and generated outputs
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+6_Analysis_Results/
+5_Experiments_Simulations/data/
+5_Experiments_Simulations/strengthening/
+
+# Manuscripts and submission artifacts
+*.tex
+*.pdf
+*.docx
+*.pptx
