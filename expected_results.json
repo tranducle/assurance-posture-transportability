@@ -1,0 +1,42 @@
+{
+  "schema_version": "canonical-v2-complete-case-2026-09-18",
+  "discovery": {
+    "n": 53,
+    "claimers": 43,
+    "nonclaimers": 10,
+    "gap": 15.95813953488372,
+    "welch_p": 0.00028500500091257786
+  },
+  "replication_complete": {
+    "n": 25,
+    "claimers": 18,
+    "nonclaimers": 7,
+    "gap": 1.4920634920634939,
+    "welch_p": 0.7465941726200462
+  },
+  "cross_stratum": {
+    "interaction_beta": -14.640669521467593,
+    "interaction_p": 0.011709970203586198,
+    "bootstrap_ci_low": -24.667981727574762,
+    "bootstrap_ci_high": -4.0635668143226376
+  },
+  "permutation": {
+    "p": 0.007769961150194249
+  },
+  "repeatability": {
+    "n": 53,
+    "exact": true
+  },
+  "retrieval": {
+    "discovery_precision": 1.0,
+    "discovery_recall": 0.5813953488372093,
+    "replication_precision": 1.0,
+    "replication_recall": 0.8333333333333334
+  },
+  "weight_sensitivity": {
+    "draws": 50000,
+    "discovery_min_gap": 11.423511888321535,
+    "replication_min_gap": 0.15167174171298825,
+    "attenuation_max": -10.34387506323646
+  }
+}
