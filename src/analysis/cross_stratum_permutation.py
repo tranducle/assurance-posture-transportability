@@ -14,10 +14,10 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2_complete.csv"
-OUT_JSON = ROOT / "6_Analysis_Results/strengthening/canonical_v2_cross_stratum_permutation.json"
-OUT_MD = ROOT / "6_Analysis_Results/strengthening/canonical_v2_cross_stratum_permutation.md"
+DISC = ROOT / "data/derived/discovery.csv"
+REPL = ROOT / "data/derived/replication_complete_case.csv"
+OUT_JSON = ROOT / "results/cross_stratum_permutation.json"
+OUT_MD = ROOT / "results/cross_stratum_permutation.md"
 SEED = 20260918
 DRAWS = 200000
 

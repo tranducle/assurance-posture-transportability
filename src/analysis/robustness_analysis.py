@@ -11,9 +11,9 @@ from scipy import stats
 from scipy.optimize import linear_sum_assignment
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2_complete.csv"
-OUT = ROOT / "6_Analysis_Results/strengthening"
+DISC = ROOT / "data/derived/discovery.csv"
+REPL = ROOT / "data/derived/replication_complete_case.csv"
+OUT = ROOT / "results"
 SEED = 20260918
 
 
@@ -235,8 +235,8 @@ def main():
     }
 
     OUT.mkdir(parents=True, exist_ok=True)
-    jp = OUT / "canonical_v2_robustness_summary.json"
-    md = OUT / "canonical_v2_robustness_report.md"
+    jp = OUT / "robustness_summary.json"
+    md = OUT / "robustness_report.md"
     jp.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     dflip = result["corrected_discovery"]["label_flip_sensitivity"]

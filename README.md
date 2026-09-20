@@ -1,22 +1,18 @@
-# Assurance–Posture Transportability
+# Assurance and External Posture Transportability
 
-This repository contains the reproducibility code for a study of public security-assurance claims, automated retrieval validity, and externally observable security posture.
+This repository contains the code used to measure public security-assurance claims, compute D-VPF external posture scores, and evaluate whether the observed association transfers across two adjacent Tranco rank strata.
 
-The study compares an adjudicated public-assurance signal with the Deterministic Vendor Posture Framework (D-VPF), a transparent 0–100 external-configuration index. The corrected discovery association is treated as exploratory, and the central transportability result is bounded to two sampled rank strata.
+Public assurance is treated as an adjudicated first-party claim, not as independently authenticated certification ground truth. D-VPF is a 0 to 100 external-configuration index covering transport, DNS and email, HTTP headers, and PKI.
 
-## Repository contents
+## Repository structure
 
-- `5_Experiments_Simulations/scripts/`: frozen canonical-v2 analysis and measurement scripts.
-- `DVPF_SCORING_AND_ACQUISITION.md`: exact D-VPF scoring and acquisition specification.
-- `expected_results.json`: frozen headline quantities used by the verifier.
-- `verify_results.py`: deterministic result checker.
-- `requirements.txt`: pinned Python dependencies.
-- `DATA.md`: data-access and reconstruction notes.
-- `REPRODUCIBILITY.md`: reproduction workflow and interpretation boundaries.
-
-## Study design in brief
-
-The frozen analysis uses a discovery cohort from one rank stratum and an independently screened adjacent rank stratum for transportability assessment. Public assurance is treated as an adjudicated observed claim, not independently authenticated certification ground truth. D-VPF measures only the specified externally observable DNS/email, HTTP, TLS/transport, and PKI configuration families.
+- `src/acquisition/`: service screening, public-assurance retrieval, and D-VPF measurement.
+- `src/analysis/`: cohort construction, statistical analysis, robustness checks, and sensitivity analyses.
+- `scripts/run_reproduction.sh`: runs the full analysis sequence.
+- `tests/`: frozen expected values and the result verifier.
+- `docs/dvpf_scoring.md`: D-VPF scoring and acquisition settings.
+- `DATA.md`: expected input layout and data notes.
+- `REPRODUCIBILITY.md`: environment setup and reproduction steps.
 
 ## Quick start
 
@@ -26,11 +22,23 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-The frozen CSV inputs are intentionally not included in this public-release staging package. See `DATA.md` for the expected data layers and availability boundary.
+Place the frozen study inputs under `data/` as described in `DATA.md`, then run:
+
+```bash
+./scripts/run_reproduction.sh
+```
+
+A successful run finishes with:
+
+```text
+ALL EXPECTED RESULT CHECKS PASSED
+```
 
 ## Reproducibility notes
 
-Canonical randomized analyses use the frozen seed `20260918`. Reproducibility-critical scoring rules, cohort rules, thresholds, and expected values are preserved unchanged from the verified supplementary artifact.
+Randomized analyses use the fixed seed `20260918`. The repository preserves the scoring rules, cohort definitions, thresholds, and expected result values used for the reported analyses.
+
+The corrected discovery analysis is exploratory because the uniform re-audit was performed after initial outcome analysis. The second stratum is used to assess transportability, not to support a causal interpretation.
 
 ## Citation
 

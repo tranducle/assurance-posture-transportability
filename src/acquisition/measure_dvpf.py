@@ -356,17 +356,17 @@ def main():
     parser = argparse.ArgumentParser(description="Deterministic Technical Security Hygiene Scanner (D-VPF)")
     parser.add_argument(
         "--compliance-input",
-        default="5_Experiments_Simulations/data/vendor_compliance_baseline.csv",
+        default="data/discovery/automated_assurance_claims.csv",
         help="Input CSV containing vendor compliance claims",
     )
     parser.add_argument(
         "--output-hygiene",
-        default="5_Experiments_Simulations/data/vendor_technical_hygiene.csv",
+        default="data/discovery/technical_measurements.csv",
         help="Output CSV for technical posture scores",
     )
     parser.add_argument(
         "--output-merged",
-        default="5_Experiments_Simulations/data/final_empirical_dataset.csv",
+        default="data/discovery/empirical_dataset.csv",
         help="Output CSV merging IV claims and DV technical scores",
     )
     parser.add_argument(

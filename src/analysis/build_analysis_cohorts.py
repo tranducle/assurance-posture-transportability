@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build canonical v2 discovery and replication cohorts after scope-rule reconciliation.
+"""Build analysis cohorts after exposure-scope reconciliation.
 
 Scope rule:
 A target public attestation claim is positive when first-party evidence is
@@ -20,16 +20,16 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC_SRC = ROOT / "5_Experiments_Simulations/strengthening/discovery_corrected_empirical.csv"
-REPL_TECH_SRC = ROOT / "5_Experiments_Simulations/strengthening/replication/final_empirical_replication.csv"
-REPL_PRE = ROOT / "5_Experiments_Simulations/strengthening/replication/attestation_adjudication_pre_outcome.csv"
+DISC_SRC = ROOT / "data/discovery/corrected_empirical_dataset.csv"
+REPL_TECH_SRC = ROOT / "data/replication/empirical_dataset.csv"
+REPL_PRE = ROOT / "data/replication/assurance_adjudication_pre_outcome.csv"
 
-OUT_DIR = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2"
-DISC_OUT = OUT_DIR / "discovery_canonical_v2.csv"
-REPL_OUT = OUT_DIR / "replication_canonical_v2.csv"
-REPL_COMPLETE_OUT = OUT_DIR / "replication_canonical_v2_complete.csv"
-LEDGER = OUT_DIR / "scope_reconciliation_ledger.csv"
-SUMMARY = ROOT / "6_Analysis_Results/strengthening/canonical_v2_build_summary.json"
+OUT_DIR = ROOT / "data/derived"
+DISC_OUT = OUT_DIR / "discovery.csv"
+REPL_OUT = OUT_DIR / "replication.csv"
+REPL_COMPLETE_OUT = OUT_DIR / "replication_complete_case.csv"
+LEDGER = OUT_DIR / "scope_reconciliation.csv"
+SUMMARY = ROOT / "results/cohort_build_summary.json"
 
 TRADPLUS = {
     "iso": 1,

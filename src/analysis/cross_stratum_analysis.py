@@ -19,9 +19,9 @@ import statsmodels.api as sm
 from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2_complete.csv"
-OUTDIR = ROOT / "6_Analysis_Results/strengthening"
+DISC = ROOT / "data/derived/discovery.csv"
+REPL = ROOT / "data/derived/replication_complete_case.csv"
+OUTDIR = ROOT / "results"
 SEED = 20260918
 PILLARS = [
     "score_tls_transport",
@@ -318,8 +318,8 @@ def main():
     }
 
     OUTDIR.mkdir(parents=True, exist_ok=True)
-    jp = OUTDIR / "canonical_v2_cross_cohort_summary.json"
-    md = OUTDIR / "canonical_v2_cross_cohort_report.md"
+    jp = OUTDIR / "cross_stratum_summary.json"
+    md = OUTDIR / "cross_stratum_report.md"
     jp.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [

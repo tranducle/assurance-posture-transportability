@@ -1,4 +1,4 @@
-# Local environments and caches
+# Python environments and caches
 .venv/
 venv/
 __pycache__/
@@ -6,6 +6,8 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Local editor and operating-system files
 .DS_Store
 .idea/
 .vscode/
@@ -18,17 +20,16 @@ __pycache__/
 credentials.json
 secrets.json
 
-# Study data and generated outputs
+# Study inputs and generated outputs
+data/
+results/
 *.csv
 *.tsv
 *.xlsx
 *.xls
 *.parquet
-6_Analysis_Results/
-5_Experiments_Simulations/data/
-5_Experiments_Simulations/strengthening/
 
-# Manuscripts and submission artifacts
+# Manuscripts and submission files
 *.tex
 *.pdf
 *.docx

@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Audit automated claim retrieval against canonical-v2 adjudicated labels."""
+"""Audit automated claim retrieval against analysis adjudicated labels."""
 
 import csv
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC_AUTO = ROOT / "5_Experiments_Simulations/data/final_empirical_dataset.csv"
-DISC_FINAL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL_AUTO = ROOT / "5_Experiments_Simulations/strengthening/replication/vendor_compliance_replication.csv"
-REPL_FINAL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2.csv"
-OUT_JSON = ROOT / "6_Analysis_Results/strengthening/canonical_v2_exposure_retrieval_audit.json"
-OUT_MD = ROOT / "6_Analysis_Results/strengthening/canonical_v2_exposure_retrieval_audit.md"
+DISC_AUTO = ROOT / "data/discovery/empirical_dataset.csv"
+DISC_FINAL = ROOT / "data/derived/discovery.csv"
+REPL_AUTO = ROOT / "data/replication/automated_assurance_claims.csv"
+REPL_FINAL = ROOT / "data/derived/replication.csv"
+OUT_JSON = ROOT / "results/retrieval_validation.json"
+OUT_MD = ROOT / "results/retrieval_validation.md"
 
 
 def load(path):
@@ -59,7 +59,7 @@ def main():
     r = audit(load(REPL_AUTO), load(REPL_FINAL))
     result = {
         "reference_label": (
-            "canonical-v2 first-party adjudicated observed public claim; "
+            "analysis first-party adjudicated observed public claim; "
             "this is a study reference, not an independent certification gold standard"
         ),
         "scope_rule": (
@@ -78,7 +78,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Canonical-v2 Exposure Retrieval Audit", "",
+        "# Analysis Exposure Retrieval Audit", "",
         result["reference_label"], "",
         "| Stratum | TP | FP | FN | TN | Precision | Recall | Specificity | F1 |",
         "|---|---:|---:|---:|---:|---:|---:|---:|---:|",

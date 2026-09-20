@@ -260,17 +260,17 @@ def main():
     parser = argparse.ArgumentParser(description="Filter SaaS/Technology Domains from Tranco list")
     parser.add_argument(
         "--input",
-        default="5_Experiments_Simulations/data/tranco_seed_list.csv",
+        default="data/discovery/tranco_seed.csv",
         help="Input CSV containing rank,domain",
     )
     parser.add_argument(
         "--output",
-        default="5_Experiments_Simulations/data/filtered_saas_domains.csv",
+        default="data/discovery/enterprise_services.csv",
         help="Output CSV of filtered SaaS domains",
     )
     parser.add_argument(
         "--output-all",
-        default="5_Experiments_Simulations/data/domain_classification_log.csv",
+        default="data/discovery/screening_log.csv",
         help="Output CSV of all evaluated domains with metadata",
     )
     parser.add_argument(

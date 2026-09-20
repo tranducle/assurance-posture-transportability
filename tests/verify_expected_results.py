@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Verify canonical-v2 generated result summaries against frozen expected metrics."""
+"""Verify generated result summaries against the frozen expected metrics."""
 
 import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
-R = ROOT / "6_Analysis_Results/strengthening"
-E = json.loads((ROOT / "expected_results.json").read_text())
+ROOT = Path(__file__).resolve().parents[1]
+R = ROOT / "results"
+E = json.loads((Path(__file__).resolve().parent / "expected_results.json").read_text())
 
 def load(name):
     return json.loads((R / name).read_text())
@@ -17,11 +17,11 @@ def close(label, actual, expected, tol=1e-8):
         raise SystemExit(f"FAIL {label}: actual={actual} expected={expected}")
     print(f"PASS {label}: {actual}")
 
-cross = load("canonical_v2_cross_cohort_summary.json")
-perm = load("canonical_v2_cross_stratum_permutation.json")
-repeat = load("canonical_v2_repeatability_summary.json")
-retr = load("canonical_v2_exposure_retrieval_audit.json")
-weights = load("canonical_v2_weight_sensitivity_summary.json")
+cross = load("cross_stratum_summary.json")
+perm = load("cross_stratum_permutation.json")
+repeat = load("repeatability_summary.json")
+retr = load("retrieval_validation.json")
+weights = load("weight_sensitivity_summary.json")
 
 d = cross["discovery"]
 r = cross["replication"]
@@ -60,4 +60,4 @@ close("weight_discovery_min_gap", weights["discovery_gap_distribution"]["min"], 
 close("weight_replication_min_gap", weights["replication_gap_distribution"]["min"], E["weight_sensitivity"]["replication_min_gap"])
 close("weight_attenuation_max", weights["attenuation_distribution"]["max"], E["weight_sensitivity"]["attenuation_max"])
 
-print("\nALL CANONICAL-V2 RESULT CHECKS PASSED")
+print("\nALL EXPECTED RESULT CHECKS PASSED")

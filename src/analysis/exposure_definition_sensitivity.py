@@ -18,10 +18,10 @@ import statsmodels.api as sm
 from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2_complete.csv"
-OUT_JSON = ROOT / "6_Analysis_Results/strengthening/canonical_v2_exposure_construct_ablation.json"
-OUT_MD = ROOT / "6_Analysis_Results/strengthening/canonical_v2_exposure_construct_ablation.md"
+DISC = ROOT / "data/derived/discovery.csv"
+REPL = ROOT / "data/derived/replication_complete_case.csv"
+OUT_JSON = ROOT / "results/exposure_definition_sensitivity.json"
+OUT_MD = ROOT / "results/exposure_definition_sensitivity.md"
 
 STANDARDS = {
     "ISO27001": "has_iso_27001",
@@ -120,7 +120,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Canonical-v2 Exposure-Construct Ablation",
+        "# Analysis Exposure-Construct Ablation",
         "",
         result["purpose"],
         "",

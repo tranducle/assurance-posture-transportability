@@ -17,11 +17,11 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/discovery_negative_reaudit.csv"
-REPL_PRE = ROOT / "5_Experiments_Simulations/strengthening/replication/attestation_adjudication_pre_outcome.csv"
-SCOPE = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/scope_reconciliation_ledger.csv"
-OUT_JSON = ROOT / "6_Analysis_Results/strengthening/canonical_v2_retrieval_failure_taxonomy.json"
-OUT_MD = ROOT / "6_Analysis_Results/strengthening/canonical_v2_retrieval_failure_taxonomy.md"
+DISC = ROOT / "data/discovery/negative_reaudit.csv"
+REPL_PRE = ROOT / "data/replication/assurance_adjudication_pre_outcome.csv"
+SCOPE = ROOT / "data/derived/scope_reconciliation.csv"
+OUT_JSON = ROOT / "results/retrieval_failure_taxonomy.json"
+OUT_MD = ROOT / "results/retrieval_failure_taxonomy.md"
 
 TRUST_TOKENS = (
     "trust", "compliance", "certification", "certifications", "certificate",
@@ -99,7 +99,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Canonical-v2 Retrieval Failure Taxonomy", "",
+        "# Analysis Retrieval Failure Taxonomy", "",
         f"- False negatives analyzed: {total}.",
         "",
         "| Source-location category | Count | Fraction |",

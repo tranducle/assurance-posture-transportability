@@ -14,9 +14,9 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-DISC = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
-REPL = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/replication_canonical_v2_complete.csv"
-OUT = ROOT / "6_Analysis_Results/strengthening"
+DISC = ROOT / "data/derived/discovery.csv"
+REPL = ROOT / "data/derived/replication_complete_case.csv"
+OUT = ROOT / "results"
 SEED = 20260918
 N_ACCEPT = 50000
 PILLARS = [
@@ -106,8 +106,8 @@ def main():
     }
 
     OUT.mkdir(parents=True, exist_ok=True)
-    jp = OUT / "canonical_v2_weight_sensitivity_summary.json"
-    md = OUT / "canonical_v2_weight_sensitivity_report.md"
+    jp = OUT / "weight_sensitivity_summary.json"
+    md = OUT / "weight_sensitivity_report.md"
     jp.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [

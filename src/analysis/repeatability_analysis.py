@@ -10,10 +10,10 @@ import numpy as np
 from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[2]
-RUN_DIR = ROOT / "5_Experiments_Simulations/strengthening/repeatability"
-OUT_DIR = ROOT / "6_Analysis_Results/strengthening"
+RUN_DIR = ROOT / "data/repeatability"
+OUT_DIR = ROOT / "results"
 RUNS = [RUN_DIR / f"run{i}_merged.csv" for i in (1, 2, 3)]
-CORRECTED_LABELS = ROOT / "5_Experiments_Simulations/strengthening/canonical_v2/discovery_canonical_v2.csv"
+CORRECTED_LABELS = ROOT / "data/derived/discovery.csv"
 SCORE_COLS = [
     "score_tls_transport",
     "score_dns_email",
@@ -117,8 +117,8 @@ def main():
     }
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    json_out = OUT_DIR / "canonical_v2_repeatability_summary.json"
-    md_out = OUT_DIR / "canonical_v2_repeatability_report.md"
+    json_out = OUT_DIR / "repeatability_summary.json"
+    md_out = OUT_DIR / "repeatability_report.md"
     json_out.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [

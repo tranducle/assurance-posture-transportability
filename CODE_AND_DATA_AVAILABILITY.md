@@ -1,9 +1,9 @@
-# Code and Data Availability
+# Code and data availability
 
-This repository provides the measurement and analysis code, the D-VPF scoring/acquisition specification, pinned dependencies, and deterministic expected-result checks for the study.
+This repository contains the measurement code, analysis code, D-VPF scoring specification, pinned dependencies, and expected-result checks used for the study.
 
-The frozen study CSVs are not included in this GitHub staging package. The verified data package is maintained separately because the public-release mode and review-anonymity state must be resolved before redistribution.
+The frozen study CSV files are maintained separately and are not included in this repository. `DATA.md` documents the expected file layout and the analysis populations.
 
-The code alone should not be used with a fresh live crawl to claim exact reproduction of the reported values. Live public assurance pages and Internet-facing DNS/TLS/HTTP/PKI configurations are time-varying.
+Exact reproduction requires the frozen measurements. A fresh Internet crawl should be treated as a new measurement because public assurance pages and Internet-facing DNS, TLS, HTTP, and PKI configurations can change over time.
 
-A formal archival/public data location can be added after the publication and anonymity conditions are finalized.
+A formal archival data location can be added when the publication and release process is complete.

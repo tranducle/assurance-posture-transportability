@@ -270,12 +270,12 @@ def main():
     parser = argparse.ArgumentParser(description="Scrape public security compliance claims from SaaS domains")
     parser.add_argument(
         "--input",
-        default="5_Experiments_Simulations/data/filtered_saas_domains.csv",
+        default="data/discovery/enterprise_services.csv",
         help="Input CSV of filtered SaaS domains",
     )
     parser.add_argument(
         "--output",
-        default="5_Experiments_Simulations/data/vendor_compliance_baseline.csv",
+        default="data/discovery/automated_assurance_claims.csv",
         help="Output CSV of vendor compliance claims",
     )
     parser.add_argument(
