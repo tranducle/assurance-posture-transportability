@@ -12,7 +12,7 @@ from scipy import stats
 ROOT = Path(__file__).resolve().parents[2]
 RUN_DIR = ROOT / "data/repeatability"
 OUT_DIR = ROOT / "results"
-RUNS = [RUN_DIR / f"run{i}_merged.csv" for i in (1, 2, 3)]
+RUNS = [RUN_DIR / f"run{i}.csv" for i in (1, 2, 3)]
 CORRECTED_LABELS = ROOT / "data/derived/discovery.csv"
 SCORE_COLS = [
     "score_tls_transport",

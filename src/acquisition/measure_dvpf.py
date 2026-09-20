@@ -1,18 +1,10 @@
 #!/usr/bin/env python3
-"""
-Phase 3: Deterministic Technical Hygiene Scanner (D-VPF Probe)
-Measures externally observable network and infrastructure configuration across 4 pillars:
-1. Transport Security (negotiated TLS version, AEAD suite, HSTS/subdomains) [25 pts]
-2. DNS & Email Trust (DMARC policy, SPF, CAA records) [25 pts]
-3. HTTP Defensive Surface (CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy) [25 pts]
-4. PKI & Certificate Hygiene (valid trust chain, issuance-date-aware lifespan,
-   RSA >= 2048 / EC >= 256 bits) [25 pts]
+"""Measure the D-VPF external-configuration index.
 
-Outputs:
-- vendor_technical_hygiene.csv
-- final_empirical_dataset.csv (IV: Compliance Claims + DV: Technical Posture Score)
-
-Part of the study data-acquisition and empirical-evaluation pipeline.
+D-VPF assigns up to 25 points to each of four observable configuration
+families: transport, DNS and email, HTTP headers, and PKI. The script writes
+the technical measurements and a merged empirical dataset for downstream
+analysis.
 """
 
 import argparse
@@ -357,17 +349,17 @@ def main():
     parser.add_argument(
         "--compliance-input",
         default="data/discovery/automated_assurance_claims.csv",
-        help="Input CSV containing vendor compliance claims",
+        help="Input CSV containing public-assurance retrieval records",
     )
     parser.add_argument(
         "--output-hygiene",
         default="data/discovery/technical_measurements.csv",
-        help="Output CSV for technical posture scores",
+        help="Output CSV containing D-VPF technical measurements",
     )
     parser.add_argument(
         "--output-merged",
         default="data/discovery/empirical_dataset.csv",
-        help="Output CSV merging IV claims and DV technical scores",
+        help="Output CSV merging assurance claims and D-VPF scores",
     )
     parser.add_argument(
         "--concurrency",
@@ -389,7 +381,7 @@ def main():
     )
     args = parser.parse_args()
 
-    print(f"[*] Reading compliance baseline vendors: {args.compliance_input}")
+    print(f"[*] Reading assurance-claim records: {args.compliance_input}")
     compliance_rows = []
     with open(args.compliance_input, mode="r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -545,7 +537,7 @@ def main():
         writer = csv.DictWriter(f, fieldnames=merged_fieldnames)
         writer.writeheader()
         writer.writerows(merged_results)
-    print(f"[+] Merged empirical dataset (IV + DV) saved to: {args.output_merged}")
+    print(f"[+] Merged empirical dataset saved to: {args.output_merged}")
 
     # Compute descriptive statistics
     claimers_scores = [

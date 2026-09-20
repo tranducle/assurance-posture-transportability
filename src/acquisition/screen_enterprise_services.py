@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""
-Phase 1: Enterprise Technology Domain Classifier & Filter (v3.0)
-Identifies commercial enterprise-facing software, cloud, developer, security, and
-infrastructure service domains from a Tranco seed list (Top 1,000 by default). Uses an explicit two-tier
-keyword rule, consumer/non-commercial exclusions, and service-domain alias
-deduplication. Every submitted seed retains its rank even if a request fails.
-Part of the study data-acquisition pipeline.
+"""Screen enterprise-facing technology services from a Tranco seed list.
+
+The classifier uses explicit inclusion terms, consumer and non-commercial
+exclusions, and service-domain alias deduplication. Each submitted seed retains
+its original rank even when a network request fails.
 """
 
 import argparse
@@ -266,12 +264,12 @@ def main():
     parser.add_argument(
         "--output",
         default="data/discovery/enterprise_services.csv",
-        help="Output CSV of filtered SaaS domains",
+        help="Output CSV of screened enterprise-service domains",
     )
     parser.add_argument(
         "--output-all",
         default="data/discovery/screening_log.csv",
-        help="Output CSV of all evaluated domains with metadata",
+        help="Output CSV of all screened domains and decision metadata",
     )
     parser.add_argument(
         "--limit",
@@ -394,7 +392,7 @@ def main():
         writer.writeheader()
         writer.writerows(deduped_saas)
 
-    print(f"[+] Filtered & deduplicated enterprise-technology cohort: {len(deduped_saas)} service domains saved to: {args.output}")
+    print(f"[+] Screened and deduplicated enterprise-service cohort: {len(deduped_saas)} service domains saved to: {args.output}")
     sys.stdout.flush()
     os._exit(0)
 

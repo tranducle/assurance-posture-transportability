@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
-"""
-Phase 2: Public Third-Party Security Attestation Claim Scraper (v3.0)
-High-precision crawler for first-party public security-assurance assertions:
-- Probes dedicated subdomains: trust.{domain}, compliance.{domain}, security.{domain}
-- Probes deep paths: /compliance/programs/, /security/compliance/, /trust-center/
-- Extracts badges from image alt, title, and aria-labels
-- Attestations audited for the primary construct: ISO/IEC 27001, SOC 2,
-  and CSA STAR.
+"""Retrieve first-party public security-assurance claims.
 
-Regulatory/framework terms such as GDPR, HIPAA, FedRAMP, and PCI DSS are
-deliberately excluded from the binary attestation construct because a webpage
-mention does not establish third-party attestation.
-
-Part of the study data-acquisition pipeline.
+The crawler checks dedicated trust, compliance, and security locations and
+extracts visible assurance evidence from page text and image metadata. The
+study construct covers ISO/IEC 27001, SOC 2, and CSA STAR. Mentions of GDPR,
+HIPAA, FedRAMP, or PCI DSS are not counted as assurance claims because a page
+mention alone does not establish the study's target evidence.
 """
 
 import argparse
@@ -276,7 +269,7 @@ def main():
     parser.add_argument(
         "--output",
         default="data/discovery/automated_assurance_claims.csv",
-        help="Output CSV of vendor compliance claims",
+        help="Output CSV of retrieved public-assurance claims",
     )
     parser.add_argument(
         "--concurrency",
@@ -387,7 +380,7 @@ def main():
         writer.writeheader()
         writer.writerows(results)
 
-    print(f"\n[+] Successfully wrote {len(results)} vendor compliance baselines to: {args.output}")
+    print(f"\n[+] Successfully wrote {len(results)} public-assurance retrieval records to: {args.output}")
     print("--- Empirical Compliance Claim Statistics ---")
     print(f"Total Unique Vendors Audited: {total}")
     print(f"Vendors Claiming ISO 27001:  {iso_count} ({iso_count/max(1, total)*100:.1f}%)")
