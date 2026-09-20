@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Classify canonical false-negative assurance sources by first-party URL path.
+"""Classify false-negative assurance sources by first-party URL path.
 
 Taxonomy is deterministic and based only on URL/domain tokens:
 - trust_compliance_audit
@@ -57,7 +57,7 @@ def main():
                     "source": r["source"],
                 })
 
-    # Replication false negatives in canonical v2 are Cloud, VMware, TradPlus.
+    # Replication false negatives used in this analysis are Cloud, VMware, and TradPlus.
     with REPL_PRE.open(encoding="utf-8") as fh:
         pre = {r["domain"]: r for r in csv.DictReader(fh)}
     with SCOPE.open(encoding="utf-8") as fh:
@@ -99,7 +99,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Analysis Retrieval Failure Taxonomy", "",
+        "# Retrieval Failure Taxonomy", "",
         f"- False negatives analyzed: {total}.",
         "",
         "| Source-location category | Count | Fraction |",

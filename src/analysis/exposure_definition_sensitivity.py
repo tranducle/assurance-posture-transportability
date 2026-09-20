@@ -120,7 +120,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Analysis Exposure-Construct Ablation",
+        "# Exposure Definition Sensitivity",
         "",
         result["purpose"],
         "",

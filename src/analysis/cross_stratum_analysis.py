@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final corrected discovery-vs-replication transportability analysis.
+"""Cross-stratum transportability analysis using the corrected discovery labels.
 
 Uses outcome-independent, manually adjudicated exposure labels:
 - Discovery: corrected negative-label audit + Liftoff/Vungle alias deduplication.

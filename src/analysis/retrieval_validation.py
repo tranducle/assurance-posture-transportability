@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit automated claim retrieval against analysis adjudicated labels."""
+"""Compare automated retrieval with the study adjudication reference labels."""
 
 import csv
 import json
@@ -59,7 +59,7 @@ def main():
     r = audit(load(REPL_AUTO), load(REPL_FINAL))
     result = {
         "reference_label": (
-            "analysis first-party adjudicated observed public claim; "
+            "first-party adjudicated observed public claim used as the study reference label; "
             "this is a study reference, not an independent certification gold standard"
         ),
         "scope_rule": (
@@ -78,7 +78,7 @@ def main():
     OUT_JSON.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     lines = [
-        "# Analysis Exposure Retrieval Audit", "",
+        "# Exposure Retrieval Validation", "",
         result["reference_label"], "",
         "| Stratum | TP | FP | FN | TN | Precision | Recall | Specificity | F1 |",
         "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
