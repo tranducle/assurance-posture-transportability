@@ -20,16 +20,18 @@ __pycache__/
 credentials.json
 secrets.json
 
-# Study inputs and generated outputs
-data/
+# Generated analysis outputs
 results/
-*.csv
-*.tsv
+data/derived/
+
+# Non-public raw or scratch data
+data/raw/
+data/private/
+
+# Office and manuscript artifacts
 *.xlsx
 *.xls
 *.parquet
-
-# Manuscripts and submission files
 *.tex
 *.pdf
 *.docx

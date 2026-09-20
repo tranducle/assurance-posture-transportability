@@ -1,0 +1,27 @@
+domain,automated_label,final_label,decision,reason,source_url
+nextcloud.com,0,0,retain_nonclaimer,"Official Nextcloud compliance page explains that self-hosted deployments, rather than Nextcloud as the operator, are certified as a whole; no direct target vendor attestation found.",https://nextcloud.com/compliance/
+segment.io,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.twilio.com/en-us/segment
+supabase.co,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://supabase.com/
+usercentrics.eu,1,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://usercentrics.com:443/
+mobolize.com,0,0,retain_nonclaimer,"No direct first-party ISO 27001, SOC 2, or CSA STAR vendor claim located in automated or high-recall audit.",
+tradplusad.com,0,1,correct_to_claimer,Official TradPlus first-party news page directly states certification.,https://www.tradplusad.com/news/45
+edna.ru,0,0,retain_nonclaimer,"No direct first-party ISO 27001, SOC 2, or CSA STAR vendor claim located in automated or high-recall audit.",
+rustdesk.com,0,0,retain_nonclaimer,Official RustDesk material describes compliance as belonging to the customer self-hosted environment rather than a vendor-side ISO/SOC attestation.,https://www.rustdesk.com/blog/remote-desktop-data-sovereignty-gdpr/
+datadome.co,1,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://datadome.co/
+ovhcloud.com,3,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://us.ovhcloud.com/
+ultradns.com,0,0,retain_nonclaimer,"DigiCert publishes company/product audits, but the located SOC/ISO evidence was not sufficiently specific to the sampled UltraDNS service to reclassify it.",https://www.digicert.com/webtrust-audits
+twilio.com,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.twilio.com/en-us
+therapservices.net,2,1,narrow_positive,Direct SOC 2 claim retained; hosting-provider ISO statement removed from vendor claim count.,https://www.therapservices.net/
+sun.com,0,0,retain_nonclaimer,"The legacy domain redirects to Oracle infrastructure pages. Oracle cloud certifications exist, but applicability to the sampled sun.com service endpoint is ambiguous, so no claim is assigned.",https://www.oracle.com/corporate/cloud-compliance/
+tawk.to,0,0,retain_nonclaimer,"Official security page lists current compliance items but not ISO 27001, SOC 2, or CSA STAR; prior official community response explicitly said ISO/SOC 2 were not yet held.",https://www.tawk.to/security/
+vmware.com,0,0,retain_nonclaimer,"Official VMware evidence located was product-specific (e.g., Tanzu Mission Control) rather than a sufficiently broad claim for the sampled vmware.com service endpoint.",https://blogs.vmware.com/tanzu/vmware-tanzu-mission-control-iso-iec-27001-soc-2-type-1-csa-star-certifications/
+mongodb.com,3,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.mongodb.com/
+medallia.com,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.medallia.com/
+rapid7.com,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.rapid7.com/
+trustarc.com,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://trustarc.com/
+pusher.com,1,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://pusher.com/
+livechatinc.com,1,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.livechat.com/
+cloud.com,0,1,correct_to_claimer,Official Cloud Software Group trust center directly lists target certifications/reports.,https://www.cloud.com/trust-center/certifications
+mapbox.com,1,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.mapbox.com/
+rackspace.com,2,1,retain_automated_positive,Stored first-party evidence was sufficient for the automated positive.,https://www.rackspace.com:443/
+romarg.com,0,0,retain_nonclaimer,"No direct first-party ISO 27001, SOC 2, or CSA STAR vendor claim located in automated or high-recall audit.",

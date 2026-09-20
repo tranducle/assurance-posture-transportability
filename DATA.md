@@ -1,53 +1,61 @@
 # Data
 
-The repository does not include the frozen study CSV files. To reproduce the reported statistics, place the study inputs under `data/` using the layout below.
+This repository includes the frozen study inputs used for the reported statistical analyses.
 
-## Source and measurement scope
+## What the data represent
 
-The sampling frame uses a frozen Tranco ranking snapshot dated 2026-09-17. The study records enterprise-service screening decisions, first-party public-assurance evidence, adjudicated assurance labels, and client-visible DNS, TLS, HTTP, and PKI measurements.
+The study combines two forms of evidence:
 
-The assurance labels are study reference labels. They should not be interpreted as independently authenticated certification ground truth.
+1. first-party public claims related to ISO/IEC 27001, SOC 2, and CSA STAR; and
+2. non-intrusive measurements of publicly reachable DNS, TLS, HTTP, and PKI configuration.
 
-## Expected layout
+The assurance labels are study reference labels based on the adjudication protocol. They are not independently authenticated certification ground truth, and they do not establish that every measured endpoint falls within the formal scope of a certificate or audit.
+
+## Public release contents
 
 ```text
 data/
   discovery/
-    tranco_seed.csv
-    screening_log.csv
-    enterprise_services.csv
-    cohort_adjudication.csv
-    automated_assurance_claims.csv
-    technical_measurements.csv
     empirical_dataset.csv
     corrected_empirical_dataset.csv
     negative_reaudit.csv
   replication/
-    tranco_ranks_1001_2000.csv
-    screening_log.csv
-    enterprise_services.csv
-    cohort_adjudication_pre_outcome.csv
-    assurance_adjudication_pre_outcome.csv
-    assurance_adjudication_high_recall.csv
     automated_assurance_claims.csv
     empirical_dataset.csv
+    assurance_adjudication_pre_outcome.csv
+    assurance_adjudication_high_recall.csv
   repeatability/
     run1.csv
     run2.csv
     run3.csv
-  derived/
-    discovery.csv
-    replication.csv
-    replication_complete_case.csv
-    scope_reconciliation.csv
+  adjudication/
+    discovery_positive_adjudication.csv
+    discovery_cohort_adjudication.csv
+    replication_cohort_adjudication.csv
+  DATA_DICTIONARY.md
+  SHA256SUMS.txt
 ```
+
+The files under `discovery/`, `replication/`, and `repeatability/` are the frozen inputs consumed by the analysis pipeline. Files under `adjudication/` provide additional provenance for cohort and assurance decisions.
 
 ## Analysis populations
 
-The discovery cohort contains 53 services: 43 with an observed public-assurance claim and 10 without one. The second stratum contains 26 services for exposure analysis. Its primary posture analysis uses 25 complete cases: 18 observed-claim and 7 no-observed-claim services.
+The corrected discovery cohort contains 53 services: 43 with an observed public assurance claim and 10 without one.
 
-One second-stratum service had failed TLS and HTTP acquisition. It is excluded from the primary complete-case posture analysis and retained in a separate sensitivity analysis.
+The second stratum contains 26 services for exposure analysis. The primary posture comparison uses 25 complete technical cases: 18 observed-claim services and 7 services with no observed target claim. One service had failed TLS and HTTP acquisition and is retained only in the relevant sensitivity analysis.
 
-## Reproduction note
+## Curation for public release
 
-Use the frozen study inputs for exact reproduction. A new crawl is a new measurement because public pages, DNS records, TLS configuration, HTTP headers, and certificates can change over time.
+The public files preserve the variables required to reproduce the reported analyses. The release removes material that is unnecessary for that purpose:
+
+- URL query strings and fragments are stripped from stored evidence locations;
+- long scraped webpage passages are replaced by the corresponding first-party evidence URLs where possible;
+- local paths, credentials, cookies, private keys, and personal email addresses are not included.
+
+This curation does not change the cohort labels, ranks, technical scores, probe status fields, statistical inputs, seeds, or expected results.
+
+## Temporal scope
+
+The sampling frame uses the Tranco snapshot dated 2026-09-17. Internet-facing configuration and public assurance pages can change, so the files in this repository should be used for exact reproduction of the article. A fresh crawl is a new measurement rather than a reproduction of the frozen study state.
+
+Column definitions are in `data/DATA_DICTIONARY.md`. SHA-256 checksums are in `data/SHA256SUMS.txt`.

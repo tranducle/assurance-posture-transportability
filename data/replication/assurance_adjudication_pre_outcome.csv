@@ -1,0 +1,27 @@
+rank,domain,auto_iso,auto_soc2,auto_csa,final_iso,final_soc2,final_csa,final_any,decision_note,source
+1032,nextcloud.com,1,0,0,0,0,0,0,"Automated ISO hit described a Nextcloud partner, not Nextcloud itself. Official Nextcloud 2026 certification news concerns CSPN/BSI, not a Nextcloud ISO 27001 claim.",https://nextcloud.com/partners/;https://nextcloud.com/blog/anssi-cspn-bsi-it-grundschutz-certifications/
+1038,segment.io,1,1,0,1,1,0,1,Confirmed by Segment Trust Center and Twilio Segment help documentation.,https://security.segment.com/;https://help.twilio.com/articles/51874958188059
+1099,supabase.co,1,1,0,1,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1131,usercentrics.eu,0,1,0,0,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1152,mobolize.com,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1237,tradplusad.com,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1288,edna.ru,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1295,rustdesk.com,0,0,0,0,0,0,0,Negative retained: first-party article explains self-hosted deployments rely on customer compliance scope and advises asking about vendor-side SOC 2 availability.,https://www.rustdesk.com/blog/remote-desktop-data-sovereignty-gdpr/
+1308,datadome.co,0,1,0,0,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1334,ovhcloud.com,1,1,1,1,1,1,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1377,ultradns.com,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1517,twilio.com,1,1,0,1,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1557,therapservices.net,1,1,0,0,1,0,1,"SOC 2 is vendor-specific; ISO wording refers to hosting in ISO-certified data centers, so ISO is removed.",stored first-party homepage evidence
+1626,sun.com,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1780,tawk.to,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1786,vmware.com,0,0,0,1,1,1,1,"False negative corrected from first-party VMware Tanzu pages documenting ISO/IEC 27001, SOC 2, and CSA STAR for Tanzu Mission Control.",https://blogs.vmware.com/tanzu/vmware-tanzu-mission-control-iso-iec-27001-soc-2-type-1-csa-star-certifications/
+1797,mongodb.com,1,1,1,1,1,1,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1801,medallia.com,1,1,0,1,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1812,rapid7.com,1,1,0,1,1,0,1,Confirmed by Rapid7 compliance page: annual SOC 2 Type II audit and ISO 27001-certified ISMS.,https://www.rapid7.com/trust/compliance/
+1833,trustarc.com,1,1,0,0,1,0,1,Generic ISO navigation is not a TrustArc ISO claim; TrustArc states its platform uses SOC 2 Type II audits.,https://trustarc.com/resource/onetrust-competitors-trustarc/
+1843,pusher.com,1,0,0,1,0,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1858,livechatinc.com,0,0,1,0,0,1,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1911,cloud.com,0,0,0,1,1,0,1,False negative corrected from Cloud Software Group Trust Center certifications page documenting product ISO 27001 and SOC 2 Type 2 coverage.,https://www.cloud.com/trust-center/certifications
+1917,mapbox.com,0,1,0,0,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1951,rackspace.com,1,1,0,1,1,0,1,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check
+1976,romarg.com,0,0,0,0,0,0,0,Automated label retained after pre-outcome review; no contrary first-party evidence identified.,stored crawler evidence / targeted official-domain check

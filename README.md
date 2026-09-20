@@ -1,17 +1,18 @@
 # Assurance and External Posture Transportability
 
-This repository contains the code used to measure public security-assurance claims, compute D-VPF external posture scores, and evaluate whether the observed association transfers across two adjacent Tranco rank strata.
+This repository contains the code and frozen study data used to examine whether public cybersecurity assurance claims are associated with externally observable technical controls across two Tranco rank strata.
 
-Public assurance is treated as an adjudicated first-party claim, not as independently authenticated certification ground truth. D-VPF is a 0 to 100 external-configuration index covering transport, DNS and email, HTTP headers, and PKI.
+Public assurance is treated as an adjudicated first-party claim. It is not an independent verification of certificate or audit scope. D-VPF is a 0 to 100 external-configuration index covering transport, DNS and email, HTTP headers, and PKI.
 
 ## Repository structure
 
-- `src/acquisition/`: service screening, public-assurance retrieval, and D-VPF measurement.
+- `data/`: frozen analysis inputs and adjudication records used for the reported results.
+- `src/acquisition/`: service screening, public-assurance retrieval, and D-VPF measurement code.
 - `src/analysis/`: cohort construction, statistical analysis, robustness checks, and sensitivity analyses.
 - `scripts/run_reproduction.sh`: runs the full analysis sequence.
-- `tests/`: frozen expected values and the result verifier.
+- `tests/`: expected values and the result verifier.
 - `docs/dvpf_scoring.md`: D-VPF scoring and acquisition settings.
-- `DATA.md`: expected input layout and data notes.
+- `DATA.md`: data provenance, curation, and file descriptions.
 - `REPRODUCIBILITY.md`: environment setup and reproduction steps.
 
 ## Quick start
@@ -20,26 +21,21 @@ Public assurance is treated as an adjudicated first-party claim, not as independ
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-```
-
-Place the frozen study inputs under `data/` as described in `DATA.md`, then run:
-
-```bash
 ./scripts/run_reproduction.sh
 ```
 
-A successful run finishes with:
+The repository already contains the frozen inputs needed for the analysis. A successful run ends with:
 
 ```text
 ALL EXPECTED RESULT CHECKS PASSED
 ```
 
-## Reproducibility notes
+Randomized analyses use the fixed seed `20260918`. The corrected discovery analysis is exploratory because the uniform re-audit occurred after the initial outcome analysis. The second stratum is used to assess transportability, not to support a causal interpretation.
 
-Randomized analyses use the fixed seed `20260918`. The repository preserves the scoring rules, cohort definitions, thresholds, and expected result values used for the reported analyses.
+## Data release
 
-The corrected discovery analysis is exploratory because the uniform re-audit was performed after initial outcome analysis. The second stratum is used to assess transportability, not to support a causal interpretation.
+The public data are curated frozen research inputs derived from publicly observable organizational assurance evidence and non-intrusive Internet-facing measurements. Long scraped webpage passages and URL query strings are not included because they are not needed to reproduce the statistical results. See `DATA.md` and `data/DATA_DICTIONARY.md` for details.
 
 ## Citation
 
-A formal citation will be added after publication.
+A formal article citation will be added after publication.

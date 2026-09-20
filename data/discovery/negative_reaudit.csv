@@ -1,0 +1,30 @@
+rank,domain,auto_iso,auto_soc2,auto_csa,final_iso,final_soc2,final_csa,final_any,note,source
+37,doubleclick.net,0,0,0,1,0,0,1,Google Marketing Platform / DoubleClick products are explicitly in ISO 27001 scope.,https://support.google.com/marketingplatform/answer/9013962
+47,digicert.com,0,0,0,0,1,0,1,"DigiCert publishes SOC 2 Type II/III audits for CertCentral, DigiCert ONE and PKI products.",https://www.digicert.com/webtrust-audits
+65,windows.net,0,0,0,0,0,0,0,No sufficiently scoped first-party target claim tied to this observed service/domain was established in the uniform audit.,targeted official-domain search
+140,kaspersky.com,0,0,0,1,1,0,1,Kaspersky states ISO 27001 certification and renewed SOC 2 Type II audit.,https://usa.kaspersky.com/transparency-center
+175,adobe.io,0,0,0,1,1,0,1,Adobe enterprise cloud offerings publish ISO 27001 and SOC 2 Type II certification/compliance.,https://experienceleague.adobe.com/en/docs/commerce/cloud-service/security/compliance
+201,vungle.com,0,0,0,0,0,0,0,No sufficiently scoped first-party ISO/SOC/CSA claim established for the Liftoff/Vungle service in the uniform audit.,targeted official-domain search
+228,pages.dev,0,0,0,1,1,0,1,Cloudflare states ISO 27001 and SOC 2 Type II validations covering its platform.,https://www.cloudflare.com/trust-hub/appi/
+232,ubuntu.com,0,0,0,1,0,0,1,"Canonical, the Ubuntu publisher, achieved ISO/IEC 27001 certification for its ISMS.",https://canonical.com/blog/canonical-achieves-iso-27001-certification
+241,cpanel.net,0,0,0,0,0,0,0,No sufficiently scoped first-party target claim established.,targeted official-domain search
+287,appsflyer.com,0,0,0,1,1,0,1,AppsFlyer states ISO 27001 and SOC 2 certifications/audits.,https://www.appsflyer.com/march-2026-faq
+299,salesforce.com,0,0,0,1,1,0,1,Salesforce compliance portal lists ISO 27001 certificate and SOC 2 report.,https://compliance.salesforce.com/en/services/salesforce-professional-services
+313,alibaba.com,0,0,0,0,0,0,0,Search results discussed supplier compliance requirements but did not establish Alibaba.com itself as holding a target claim for this unit.,targeted official-domain search
+327,datadoghq.com,0,0,0,1,1,0,1,Datadog references its ISO 27001 certification and SOC 2 Type II audit.,https://www.datadoghq.com/legal/contractingfaq/
+358,opendns.com,0,0,0,0,1,0,1,"Cisco Umbrella, successor to OpenDNS, has a current SOC 2 Type II attestation.",https://www.cisco.com/c/en/us/support/docs/security/umbrella/224938-cisco-umbrella-soc-2-attestation.html
+383,ip-api.com,0,0,0,0,0,0,0,No first-party target claim established.,targeted official-domain search
+387,plesk.com,0,0,0,0,0,0,0,"Plesk publishes security/compliance guidance but no first-party ISO 27001, SOC 2, or CSA STAR attestation was established.",https://www.plesk.com/legal/
+388,newrelic.com,0,0,0,1,1,0,1,New Relic currently lists ISO 27001 and SOC 2 among maintained certifications/attestations.,https://docs.newrelic.com/docs/security/security-privacy/compliance/regulatory-audits-new-relic-services/
+406,ipify.org,0,0,0,0,0,0,0,No first-party target claim established.,targeted official-domain search
+451,ipinfo.io,0,0,0,0,0,0,0,IPinfo explicitly states ISO 27001-style certification is not applicable to its datasets; no target attestation was established.,https://support.ipinfo.io/hc/en-us/articles/30792506325522-Is-IPinfo-certified-with-any-industry-standard-for-information-security-and-data-protection-such-as-ISO27001
+496,atlassian.net,0,0,0,1,1,1,1,"Atlassian Trust Center lists ISO 27001, SOC 2 Type II and CSA STAR coverage.",https://www.atlassian.com/trust/security/security-practices
+566,eset.com,0,0,0,1,1,0,1,ESET states ISO 27001 certification and SOC 2 Type 2 attestation.,https://www.eset.com/us/business/cybersecurity-compliance-for-business/
+594,dreamhost.com,0,0,0,0,0,0,0,"No first-party ISO 27001, SOC 2 or CSA STAR claim established in the uniform audit.",https://help.dreamhost.com/hc/en-us/articles/214879028-Security-FAQs
+605,bitdefender.net,0,0,0,1,1,0,1,Bitdefender certification page states ISO 27001 and SOC 2 Type 2 certification/compliance.,https://www.bitdefender.com/en-ae/partners/certifications
+661,redhat.com,0,0,0,1,1,1,1,"Red Hat publishes ISO 27001, SOC 2 Type 2 and CSA STAR Level 2 coverage for audited managed services.",https://access.redhat.com/security/rh-compliance-certifications-attestations
+735,globalsign.com,0,0,0,1,0,0,1,GlobalSign repository lists current ISO/IEC 27001 certificate.,https://www.globalsign.com/en/repository
+802,visma.com,0,0,0,1,0,0,1,Visma Cloud Delivery Model publishes ISO 27001 certification.,https://www.visma.com/trust-centre/vismaclouddelivery
+822,zoho.com,0,0,0,1,1,0,1,Zoho compliance page lists ISO 27001 certification and SOC 2 Type 2.,https://www.zoho.com/compliance.html
+834,liftoff.io,0,0,0,0,0,0,0,No sufficiently scoped first-party target claim established; this domain duplicates the Liftoff/Vungle service represented by higher-ranked vungle.com.,targeted official-domain search
+898,readthedocs.io,0,0,0,0,0,0,0,Read the Docs publishes security policies but no target attestation was established.,https://docs.readthedocs.com/platform/latest/legal/security-policy.html

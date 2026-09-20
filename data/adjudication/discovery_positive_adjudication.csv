@@ -1,0 +1,26 @@
+rank,domain,automated_positive,adjudication,note,evidence
+29,github.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://github.com/security
+36,fastly.net,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.fastly.com/compliance
+45,gandi.net,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.gandi.net/en-US
+77,zoom.us,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.zoom.com/en/trust/legal-compliance/
+92,sentry.io,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://sentry.io/welcome/
+93,f5.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.f5.com/company/trust-center/compliance
+138,dropbox.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://trust.dropbox.com/
+179,shopify.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.shopify.com/security
+239,stripe.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://docs.stripe.com/security
+258,hubspot.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://legal.hubspot.com/security
+260,hcaptcha.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.hcaptcha.com/
+391,paloaltonetworks.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://trust.paloaltonetworks.com/
+500,dynatrace.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://trust.dynatrace.com/
+529,trendmicro.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.trendmicro.com/en_us/about/trust-center/compliance.html
+591,klaviyo.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.klaviyo.com/security;https://www.klaviyo.com/
+622,onetrust.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.onetrust.com/trust/
+639,branch.io,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.branch.io/;https://trust.branch.io/
+829,deepl.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.deepl.com/en/pro-data-security
+835,blackberry.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.blackberry.com/en/legal/privacy-notice
+839,odoo.com,1,retain,Automated snippet partly references hosting-provider certifications; first-party Odoo material dated April 2026 separately states Odoo achieved ISO/IEC 27001 and maintains SOC 2 reports. Classification retained with this caveat.,https://www.odoo.com/privacy;https://www.odoo.com/security
+853,auvik.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.auvik.com/network-management-software/network-security-and-visibility/
+862,jetbrains.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.jetbrains.com/
+903,agora.io,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.agora.io/en/compliance/;https://www.agora.io/en/
+940,netlify.app,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://www.netlify.com/security/
+954,tailscale.com,1,retain,Positive evidence reviewed; first-party page context identifies vendor security assurance.,https://tailscale.com/security

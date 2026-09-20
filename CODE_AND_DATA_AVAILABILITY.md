@@ -1,9 +1,9 @@
 # Code and data availability
 
-This repository contains the measurement code, analysis code, D-VPF scoring specification, pinned dependencies, and expected-result checks used for the study.
+This repository contains the frozen study inputs, measurement and analysis code, D-VPF scoring specification, pinned dependencies, adjudication records, and expected-result checks used for the study.
 
-The frozen study CSV files are maintained separately and are not included in this repository. `DATA.md` documents the expected file layout and the analysis populations.
+The public CSV files under `data/` are curated versions of the frozen research inputs. They preserve the values required for exact statistical reproduction while omitting long scraped webpage passages, URL query strings, and local or credential-bearing material that is not needed for the analysis.
 
-Exact reproduction requires the frozen measurements. A fresh Internet crawl should be treated as a new measurement because public assurance pages and Internet-facing DNS, TLS, HTTP, and PKI configurations can change over time.
+Run `./scripts/run_reproduction.sh` from the repository root to rebuild the derived cohorts and analyses. The verifier compares the outputs with the frozen expected values and reports `ALL EXPECTED RESULT CHECKS PASSED` when the reproduction succeeds.
 
-A formal archival data location can be added when the publication and release process is complete.
+A fresh Internet crawl is a new measurement because public assurance pages and Internet-facing DNS, TLS, HTTP, and PKI configurations can change over time.
